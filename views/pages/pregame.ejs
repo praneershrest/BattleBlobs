@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="/stylesheets/pregame.css">
+      <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Select Your Character</title>
+    <link rel="icon" href="/assets/alienPink.png">
+    <script src="js/setColor.js" defer></script>
+  </head>
+  <body>
+      <div align="right" id="logoutDiv">
+          <form class="" action="/logout" method="post" onsubmit="return confirm('Are you sure you want to logout?')">
+            <button type="submit" id="logout">Logout</button>
+          </form>
+      </div>
+
+
+    <% if ( typeof message != 'undefined' && message.length > 0) { %>
+    <p class="successMessage"><%= message %></p>
+    <% } %>
+
+
+    <h2 align="center">Select your character:</h2>
+
+    <div id="characterDiv"></div>
+    <form align="center" class="" action="/waitForPlayers" method="post">
+
+      <label>
+          <input name="character" value="pink" type="radio" checked/>
+          <img src="assets/ui/alienPink.png">
+      </label>
+      <label>
+          <input name="character" value="blue" type="radio"/>
+          <img src="assets/ui/alienBlue.png">
+      </label>
+      <label>
+          <input name="character" value="green" type="radio"/>
+          <img src="assets/ui/alienGreen.png">
+      </label>
+      <label>
+          <input name="character" value="beige" type="radio"/>
+          <img src="assets/ui/alienBeige.png">
+      </label>
+      <label>
+          <input name="character" value="yellow" type="radio"/>
+          <img src="assets/ui/alienYellow.png">
+      </label>
+
+      <button type="submit" name="button" onclick="getColor()">Join game!</button>
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/alienPink.png">
+  </head>
+  <body>
+    <div id="confirmcontainer" class="container">
+    <h1>Please enter the confirmation code sent to your email</h1>
+    <form class="" action="/mailCodeForm" method="post">
+      <input type="hidden" name="name" value="<%= insertUsername %>">
+      <input type="hidden" name="pwd" value="<%= insertPassword %>">
+      <input type="hidden" name="email" value="<%= insertEmail %>">
+      <input type="hidden" name="code" value="<%= mailCode %>">
+      <input type="text" name="mailCodeInput" value=""><br>
+      <% if ( typeof confirmationErr != 'undefined' && confirmationErr.length > 0) { %>
+      <p class="errorMessage"><%= confirmationErr %></p>
+      <% } %>
+      <button type="submit" name="button">Confirm</button>
+
+    </form>
+    </div>
+  </body>
+</html>

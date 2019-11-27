@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>Battle Blobs</title>
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/alienPink.png">
+    <script src="js/setData.js" defer></script>
+  </head>
+  <body>
+
+
+    <h1 align="center">BATTLE BLOBS</h1>
+
+    <% if ( typeof signupMessage != 'undefined' && signupMessage.length > 0) { %>
+    <p align="center" class="successMessage"><%= signupMessage %></p>
+    <% } %>
+    <% if ( typeof forgotMessage != 'undefined' && forgotMessage.length > 0) { %>
+    <p align="center" class="successMessage"><%= forgotMessage %></p>
+    <% } %>
+
+    <!--modal content-->
+    <form class="" action="/login" method="post">
+      <div class="container">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" maxlength="30" required>
+
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd" name="pwd" placeholder="Enter password" maxlength="30" required>
+
+        <% if ( typeof loginMessage != 'undefined' && loginMessage.length > 0) { %>
+        <p align="center" class="errorMessage"><%= loginMessage %></p>
+        <% } %>
+        <a href="/forgotPwd">Change Password</a>
+        <button type="submit" name="signInBtn" onclick = "getName()">Login</button>
+    </form>
+    <form class="" action="/signUp" method="post">
+      <button type="submit" name="signUpBtn">Sign up</button>
+    </form>
+  </div>
+  <div align="center">
+    <div id="blobL" align="left">
+      <img src="/assets/ui/alienPink.png" alt="">
+    </div>
+    <div id="blobR" align="right">
+      <img src="/assets/ui/alienYellow.png" alt="">
+    </div>
+</div>
+
+  </body>
+
+</html>

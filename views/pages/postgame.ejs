@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="/stylesheets/pregame.css">
+      <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+      <meta charset="utf-8">
+    <title>Postgame</title>
+    <link rel="icon" href="/assets/alienPink.png">
+  </head>
+  <body>
+    <div align="right" id="logoutDiv">
+        <form class="" action="/logout" method="post" onsubmit="return confirm('Are you sure you want to logout?')">
+          <button type="submit" id="logout">Logout</button>
+        </form>
+    </div>
+
+    <h1 align="center">POSTGAME SCREEN</h1>
+    <h2 align="center">GAME OVER</h2>
+    <form class="" action="/home" method="post">
+      <button type="submit" name="button">Go Home</button>
+    </form>
+  </body>
+</html>

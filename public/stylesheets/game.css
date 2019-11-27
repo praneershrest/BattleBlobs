@@ -1,0 +1,216 @@
+body, html{
+    background-image: url('/assets/forestbg.png');
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+#logoutDiv{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 120px;
+  }
+
+h1{
+    font-family: 'Neucha', cursive;
+    font-size: 40pt;
+}
+h2{
+  font-family: 'Neucha', cursive;
+  font-size: 18pt;
+}
+h5, figcaption{
+  font-family: 'Neucha', cursive;
+  font-size: 14pt;
+}
+
+
+#phaser,#toggles{
+    width: 60%;
+    margin-top: 3%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+}
+
+#toggles{
+  height: 30%;
+  width: 10%;
+  margin-left: 1%;
+  display: block;
+}
+
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Neucha', cursive;
+    font-size: 14pt;
+    bottom:0;
+
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: orange;
+
+  }
+
+  #logout{
+    width: 90px;
+  }
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 35px;
+  margin-bottom: 18px;
+  margin-top: 10px;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::after {
+  position:relative;
+  top:-15px;
+  left: 13px;
+  content: "label";
+  font-family: 'Neucha', cursive;
+  font-size: 14pt;
+}
+
+#toggleWeather::after{
+  content: "WEATHER";
+  top:-15px;
+  left: 0px;
+}
+
+#music::after{
+  content: "MUSIC";
+  top:-15px;
+  left: 5px;
+}
+
+#sound::after{
+  content: "SOUNDFX";
+  top:-15px;
+  left: 0px;
+  font-size: 12pt;
+}
+
+input:checked + .slider {
+  background-color: darkgreen;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch h5 {
+  position: absolute;
+  top: 0;
+  margin: 0.75rem;
+}
+
+#loading{
+  width: 60%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+#controlsBtn:active, #controlsBtn:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-top: 10%;
+  display: block;
+  padding: 0 18px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+
+#controlsBtn {
+  font-size: 22px;
+  cursor: pointer;
+  background-color: darkgreen;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 10px;
+  width:70%;
+  margin-left: 15%;
+  margin-top: 7%;
+
+}
+figure{
+  text-align: center;
+  display: none;
+}
+

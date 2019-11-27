@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/alienPink.png">
+    <style>
+      /* #movementimg {
+        display: block;
+        margin: auto;
+        height: 200px;
+        width: 300px;
+      }
+      #movement {
+        font-size: 30px;
+        margin-left: 900px;
+      } */
+    </style>
+    <meta charset="utf-8">
+    <title>How to Play</title>
+  </head>
+  <body>
+    <div align="right" id="logoutDiv">
+        <form class="" action="/logout" method="post" onsubmit="return confirm('Are you sure you want to logout?')">
+          <button type="submit" id="logout">Logout</button>
+        </form>
+    </div>
+
+    <h1 align="center">HOW TO PLAY</h1>
+    <h3 align="center">Objective: Outlast the other blobs!</h3>
+    <h3 align="center">Controls</h3>
+    <div align="center" class="controlkeys">
+      <figure>
+          <img src="/assets/arrowkeys.png" height="200" width= "250" id="arrowkeys">
+          <figcaption id="movement">Movement</figcaption>
+      </figure>
+      <figure>
+          <img src="/assets/keyz.png" height= "100" width="100" id="spacebar" alt="">
+          <figcaption id="movement">Set traps</figcaption>
+      </figure>
+      <figure>
+          <img src="/assets/spacebar.png" height= "100" width="200" id="spacebar" alt="">
+          <figcaption id="movement">Attack!</figcaption>
+      </figure>
+
+
+      <form class="start" action="/pregame" method="post">
+        <button type="submit" name="button">Continue</button>
+      </form>
+  </div>
+
+
+
+  </body>
+</html>

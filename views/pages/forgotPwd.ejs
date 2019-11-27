@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change Password</title>
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/alienPink.png">
+  </head>
+  <body>
+    <h1 align="center">Change password</h1>
+    <form class="" action="/forgotPwdAction" method="post">
+      <div id="signupcontainer" class="container">
+          <label for="uname">Username</label>
+          <input name="forgotPwdName" type="text" maxlength="30" placeholder="Username" required><br>
+          <label for="newPswd">New Password</label>
+          <input name="newPwd" type="text" maxlength="30" placeholder="New password" required><br>
+          <% if ( typeof loginMessage != 'undefined' && loginMessage.length > 0) { %>
+          <p align="center" class="errorMessage"><%= loginMessage %></p>
+          <% } %>
+        <button type="Submit" name="button">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

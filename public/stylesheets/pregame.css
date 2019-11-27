@@ -1,0 +1,87 @@
+body, html{
+    background-image: url('/assets/forestbg.png');
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+
+h2,p,h3{
+    font-family: 'Neucha', cursive;
+}
+h2{
+    font-size: 35pt;
+}
+h3{
+    font-size: 30pt;
+}
+p{
+    font-size: 25pt;
+}
+
+[type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img{
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+}
+
+[type=radio]:checked + img{
+    outline: 2px solid darkgreen;
+}
+
+[type=radio]:hover + img{
+    opacity: 0.8;
+}
+
+button{
+    display: block;
+    background-color: darkgreen;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    font-family: 'Neucha', cursive;
+    font-size: 20pt;
+    position: absolute;
+    bottom: 30px;
+    margin-left: 30%;
+
+
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+#characterDiv{
+    height: 30%;
+    margin: 0 auto;
+}
+
+#logoutDiv{
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 130px;
+
+}
+
+#logout{
+    width: 100%;
+    margin: 0;
+}

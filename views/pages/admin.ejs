@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin View</title>
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/alienPink.png">
+  </head>
+  <body>
+    <div align="right" id="logoutDiv">
+        <form class="" action="/logout" method="post" onsubmit="return confirm('Are you sure you want to logout?')">
+          <button type="submit" id="logout">Logout</button>
+        </form>
+    </div>
+
+    <h1 align="center">HOME PAGE</h1>
+    <% if ( typeof message != 'undefined' && message.length > 0) { %>
+    <p class="successMessage"><%= message %></p>
+    <% } %>
+
+    <h2 align="center"> ADMIN VIEW</h2>
+    <table align="center" border=1>
+			<p align="center">Battle Blobs User Accounts</p>
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Type of User</th>
+          <th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% rows.forEach((r) => { %>
+				<tr>
+          <form action="/removeUser/<%= r.userid %>" method="get" onsubmit="return confirm('Are you sure you want to remove <%= r.username %> from users list?')">
+						<td><%= r.username %></td>
+						<td><%= r.email %></td>
+						<td><%= r.usertype %></td>
+						<td>
+
+              <%if( r.usertype == 'User'){%><button type="submit" id="deleteUser">DELETE USER ACCOUNT</button><%}%>
+
+            </td>
+					</form>
+				</tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <div align="center">
+        <form class="" action="/pregame" method="post">
+          <button type="submit" name="button">Start</button>
+        </form>
+        <form class="" action="/home" method="post">
+          <button type="submit" name="button">How to play</button>
+        </form>
+    </div>
+
+  </body>
+</html>

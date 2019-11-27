@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+      <title>Sign Up</title>
+      <link rel="icon" href="/assets/alienPink.png">
+      <link rel="stylesheet" href="/stylesheets/forms.css">
+      <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 align="center">SIGN UP</h1>
+
+
+    <form id="signupform" action="/signUpForm" method="POST">
+      <div id="signupcontainer" class="container">
+          <label for="uname">Username</label>
+          <input id="uname" name="username" type="text" maxlength="30" placeholder="Username" required>
+
+          <label for="pswd">Password</label>
+          <input id="pswd" name="password" type="password" maxlength="30" placeholder="Password" required>
+
+          <label for="confirmpswd">Confirm password</label>
+          <input id="confirmpswd" name="confirmPassword" type="password" maxlength="30" placeholder="Confirm password" required>
+
+          <label for="mail">Email</label>
+          <input id="mail" name="email" type="email" placeholder="Email" required>
+
+          <% if ( typeof message != 'undefined' && message.length > 0) { %>
+            <p align = "center" class="errorMessage"><%= message %></p>
+          <% } %>
+          <% if ( typeof usernameMessage != 'undefined' && usernameMessage.length > 0) { %>
+            <p align = "center" class="errorMessage"><%= usernameMessage %></p>
+          <% } %>
+
+          <button type="submit">Sign Up!</button>
+        </div>
+
+    <!--
+      <table>
+      <tr>
+        <td>Username: </td>
+
+        <td><input name="username" type="text" maxlength="30" placeholder="Username" required></td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input name="password" type="text" maxlength="30" placeholder="Password" required></td>
+
+      </tr>
+      <tr>
+        <td>Confirm password: </td>
+        <td><input name="confirmPassword" type="text" maxlength="30" placeholder="Confirm password"></td>
+      </tr>
+      <tr>
+        <td>Email: </td>
+
+        <td><input name="email" type="email" placeholder="optional"></td>
+
+      </tr>
+    </table>
+  -->
+    </form>
+  </body>
+</html>
